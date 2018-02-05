@@ -284,10 +284,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Actor\Actor.cs" />
-    <Compile Include="Assets\Scripts\Actor\Sword.cs" />
+    <Compile Include="Assets\Scripts\core\Actor\Actor.cs" />
+    <Compile Include="Assets\Scripts\core\TouchManager.cs" />
     <Compile Include="Assets\Scripts\Data\DataManager.cs" />
     <Compile Include="Assets\Scripts\Event\DelegateSystem.cs" />
+    <Compile Include="Assets\Scripts\Sword\Sword.cs" />
     <Compile Include="Assets\Scripts\UI\UIMainPanel.cs" />
   </ItemGroup>
   <ItemGroup>
