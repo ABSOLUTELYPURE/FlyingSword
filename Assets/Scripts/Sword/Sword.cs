@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using DG.Tweening;
 
 namespace Actor
 {
@@ -27,8 +28,8 @@ namespace Actor
         private void OnClick(TouchEventArgs args)
         {
             Vector3 pos = Utils.Screen2WorldPosition(args.touchedPos);
-            //Vector3 pos = new Vector3(args.touchedPos.x - Screen.width / 2.0f, args.touchedPos.y - Screen.height / 2.0f, 0);
-            this.transform.Translate(pos);
+            this.gameObject.transform.DOKill(false);
+            this.gameObject.transform.DOMove(pos,0.5f);//.SetSpeedBased(true);
             Debug.Log("-------OnMove-------"+args.touchedPos);
             Debug.Log("-------OnMove-------"+pos);
         }

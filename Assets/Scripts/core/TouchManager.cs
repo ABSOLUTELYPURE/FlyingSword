@@ -110,7 +110,7 @@ public class TouchManager:MonoBehaviour
             }
         }
 
-        if (EventSystem.current.IsPointerOverGameObject())
+        if (EventSystem.current && EventSystem.current.IsPointerOverGameObject())
         {
             return;
         }
@@ -171,7 +171,7 @@ public class TouchManager:MonoBehaviour
 
     private void GetMouseEvent()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
+        if (EventSystem.current && EventSystem.current.IsPointerOverGameObject())
         {
             return;
         }
