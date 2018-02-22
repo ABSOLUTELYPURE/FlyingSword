@@ -26,8 +26,11 @@ namespace Actor
 
         private void OnClick(TouchEventArgs args)
         {
-            this.transform.Translate(new Vector3(args.touchedPos.x,0,args.touchedPos.y));
-            Debug.Log("-------OnMove-------"+this.transform.position);
+            Vector3 pos = Utils.Screen2WorldPosition(args.touchedPos);
+            //Vector3 pos = new Vector3(args.touchedPos.x - Screen.width / 2.0f, args.touchedPos.y - Screen.height / 2.0f, 0);
+            this.transform.Translate(pos);
+            Debug.Log("-------OnMove-------"+args.touchedPos);
+            Debug.Log("-------OnMove-------"+pos);
         }
         private void OnDoubleClick(TouchEventArgs args)
         {
