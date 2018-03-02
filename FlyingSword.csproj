@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.3.0f3</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -261,6 +259,33 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets/3rdParty/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween43">
+      <HintPath>Assets/3rdParty/Demigiant/DOTween/DOTween43.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween46">
+      <HintPath>Assets/3rdParty/Demigiant/DOTween/DOTween46.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween50">
+      <HintPath>Assets/3rdParty/Demigiant/DOTween/DOTween50.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>Assets/3rdParty/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenPro">
+      <HintPath>Assets/3rdParty/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenProEditor">
+      <HintPath>Assets/3rdParty/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DemiLib">
+      <HintPath>Assets/3rdParty/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DemiEditor">
+      <HintPath>Assets/3rdParty/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>C:/Users/Sky/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
@@ -282,9 +307,18 @@
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/Sky/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
+    <Reference Include="Excel">
+      <HintPath>Assets/3rdParty/Config/Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>Assets/3rdParty/Config/System.Data.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\core\Actor\Actor.cs" />
+    <Compile Include="Assets\3rdParty\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
+    <Compile Include="Assets\Scripts\Actor\Actor.cs" />
+    <Compile Include="Assets\Scripts\core\Config\ConfigManager.cs" />
+    <Compile Include="Assets\Scripts\core\Config\Excel2CSharp.cs" />
     <Compile Include="Assets\Scripts\core\TouchManager.cs" />
     <Compile Include="Assets\Scripts\core\Utils.cs" />
     <Compile Include="Assets\Scripts\Data\DataManager.cs" />
@@ -294,6 +328,18 @@
     <Compile Include="Assets\Scripts\UI\UIUtils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\3rdParty\Demigiant\DOTween\DOTween.XML" />
+    <None Include="Assets\3rdParty\Demigiant\DOTween\DOTween43.xml" />
+    <None Include="Assets\3rdParty\Demigiant\DOTween\DOTween46.xml" />
+    <None Include="Assets\3rdParty\Demigiant\DOTween\DOTween50.xml" />
+    <None Include="Assets\3rdParty\Demigiant\DOTween\Editor\DOTweenEditor.XML" />
+    <None Include="Assets\3rdParty\Demigiant\DOTween\readme.txt" />
+    <None Include="Assets\3rdParty\Demigiant\DOTweenPro\DOTweenPro.XML" />
+    <None Include="Assets\3rdParty\Demigiant\DOTweenPro\Editor\DOTweenProEditor.XML" />
+    <None Include="Assets\3rdParty\Demigiant\DOTweenPro\readme.txt" />
+    <None Include="Assets\3rdParty\Demigiant\DemiLib\Core\DemiLib.xml" />
+    <None Include="Assets\3rdParty\Demigiant\DemiLib\Core\Editor\DemiEditor.xml" />
+    <None Include="Assets\3rdParty\Demigiant\readme_DOTweenPro.txt" />
     <None Include="Assets\Bundle\ab\Local\README.txt" />
     <None Include="Assets\DesignRes\README.txt" />
   </ItemGroup>

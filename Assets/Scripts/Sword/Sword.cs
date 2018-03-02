@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using DG.Tweening;
+using GF;
 
 namespace Actor
 {
     public class Sword:Actor
     {
+        private TouchManager m_touchManager;
         private TouchEventHandler onClick;
         private TouchEventHandler onDoubleClick;
 
@@ -12,17 +14,22 @@ namespace Actor
         {
             onClick = new TouchEventHandler(OnClick);
             onDoubleClick = new TouchEventHandler(OnDoubleClick);
+            ConfigManager.LoadConfigFiles();
         }
 
         private void Start()
         {
-            TouchManager.GetInstance().onOneTouchBegan += onClick;
-            TouchManager.GetInstance().onTwoTouchBegan += onDoubleClick;
+            m_touchManager = GF.TouchManager.GetInstance();
+            m_touchManager.onOneTouchBegan += onClick;
+            m_touchManager.onTwoTouchBegan += onDoubleClick;
         }
         private void OnDestroy()
         {
-            TouchManager.GetInstance().onOneTouchBegan -= onClick;
-            TouchManager.GetInstance().onTwoTouchBegan -= onDoubleClick;
+            if(m_touchManager)
+            {
+                m_touchManager.onOneTouchBegan -= onClick;
+                m_touchManager.onTwoTouchBegan -= onDoubleClick;
+            }
         }
 
         private void OnClick(TouchEventArgs args)

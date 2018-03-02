@@ -2,10 +2,12 @@
 using System.Collections;
 using UnityEngine.EventSystems;
 
-public delegate void TouchEventHandler(TouchEventArgs args);
+public delegate void TouchEventHandler(GF.TouchEventArgs args);
+namespace GF
+{
 public class TouchManager:MonoBehaviour
 {
-    public static TouchManager instance;
+    private static TouchManager instance;
     private static bool isInited = false;
 
     public static bool IsInited()
@@ -18,6 +20,7 @@ public class TouchManager:MonoBehaviour
         if(instance == null)
         {
             GameObject go = new GameObject("TouchManager");
+            DontDestroyOnLoad(go);
             instance = go.AddComponent<TouchManager>();
             instance.Init();
         }
@@ -280,4 +283,5 @@ public class UnityHelper
     {
         return Vector2.Distance(GetGenScreenPos(pos1), GetGenScreenPos(pos2));
     }
+}
 }
