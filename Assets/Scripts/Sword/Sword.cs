@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 using DG.Tweening;
+using Config;
 using GF;
 
 namespace Actor
@@ -14,7 +16,9 @@ namespace Actor
         {
             onClick = new TouchEventHandler(OnClick);
             onDoubleClick = new TouchEventHandler(OnDoubleClick);
-            ConfigManager.LoadConfigFiles();
+
+            List<test_data.test> t = test_data.Instance.list;
+            Debug.Log(t.Count);
         }
 
         private void Start()
