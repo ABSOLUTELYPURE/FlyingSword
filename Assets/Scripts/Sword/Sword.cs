@@ -16,9 +16,6 @@ namespace Actor
         {
             onClick = new TouchEventHandler(OnClick);
             onDoubleClick = new TouchEventHandler(OnDoubleClick);
-
-            List<test_data.test> t = test_data.Instance.list;
-            Debug.Log(t.Count);
         }
 
         private void Start()
